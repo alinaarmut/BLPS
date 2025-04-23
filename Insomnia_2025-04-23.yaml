@@ -1,0 +1,360 @@
+type: collection.insomnia.rest/5.0
+name: BLPS
+meta:
+  id: wrk_78882e224c2a4ff5b028c6cdf806622d
+  created: 1744062757361
+  modified: 1744062757361
+collection:
+  - url: http://localhost:8172/bookings/book/
+    name: заявка на бронь
+    meta:
+      id: req_ba78108d04474b6489dbd4a84855d8a6
+      created: 1744062767622
+      modified: 1745396296885
+      isPrivate: false
+      sortKey: -1744062767623
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+            "id": 2
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.2
+        id: pair_8e61fddf0cb04428998ef473d995ad4e
+    authentication:
+      type: bearer
+      token: "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMSIsImlhdCI6MTc0NTM5MzU4OCwiZXhwIj\
+        oxNzQ1NDc5OTg4fQ.wI5yvFWGE_TyENuy9hgrZnzTR3YLvUZN2qAmQHqo_EM "
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8172/bookings/cancel/1
+    name: отмена запроса хостом/юзером
+    meta:
+      id: req_948fe72b147f4ede9f30cc4debc72be4
+      created: 1744063450684
+      modified: 1745355110050
+      isPrivate: false
+      sortKey: -1744063450684
+    method: POST
+    parameters:
+      - id: pair_1b673f5ff9f646ba8b9fb0251d6fcb0c
+        name: id
+        value: "2"
+        disabled: false
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMSIsImlhdCI6MTc0NTM1NDk0NywiZXhwIjoxNzQ1NDQxMzQ3fQ.ef-a7hrCy_xmY36ga09u3oXDDqF2l_KhhChVP1nPVAU
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8172/bookings/status/2
+    name: получить статус запроса (объявления)
+    meta:
+      id: req_fb085d2a32f34056b3fedea7167a7c92
+      created: 1744063489844
+      modified: 1745396303598
+      isPrivate: false
+      sortKey: -1744063489844
+    method: GET
+    body:
+      mimeType: application/json
+    parameters:
+      - id: pair_77e20498d00a4ba39a22b39e89e670f5
+        disabled: false
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.2
+    authentication:
+      type: bearer
+      token: "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMSIsImlhdCI6MTc0NTM5MzU4OCwiZXhwIj\
+        oxNzQ1NDc5OTg4fQ.wI5yvFWGE_TyENuy9hgrZnzTR3YLvUZN2qAmQHqo_EM "
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8172/bookings/accept/2
+    name: подтверждение заявки хостом
+    meta:
+      id: req_c3661138181c426b96fc3c1e2c3bc45b
+      created: 1744063527197
+      modified: 1745396317936
+      isPrivate: false
+      sortKey: -1744063527197
+    method: POST
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJob3N0MSIsImlhdCI6MTc0NTM5MzU0MSwiZXhwIjoxNzQ1NDc5OTQxfQ.4zXs7OKFjA0oNP2xOp63ydubw5TC4dLlwRe6M-Kfg9A
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8172/bookings/6/rebook
+    name: повторная заявка хосту
+    meta:
+      id: req_6957aecb4eec4285add31aac05ce9bab
+      created: 1744063567099
+      modified: 1745394877898
+      isPrivate: false
+      sortKey: -1744063567099
+    method: POST
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+    authentication:
+      type: bearer
+      token: "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMSIsImlhdCI6MTc0NTM5MzU4OCwiZXhwIj\
+        oxNzQ1NDc5OTg4fQ.wI5yvFWGE_TyENuy9hgrZnzTR3YLvUZN2qAmQHqo_EM "
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8172/notification/list
+    name: просмотр всех уведомлений заявок
+    meta:
+      id: req_4e09b7c319d74b3499f235efab091975
+      created: 1744063594621
+      modified: 1745394939141
+      isPrivate: false
+      sortKey: -1744063594621
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJob3N0MSIsImlhdCI6MTc0NTM5MzU0MSwiZXhwIjoxNzQ1NDc5OTQxfQ.4zXs7OKFjA0oNP2xOp63ydubw5TC4dLlwRe6M-Kfg9A
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8172/offer/accept/2
+    name: принятие оффера юзером
+    meta:
+      id: req_aaf6bd108ec6452982825893f0bacd75
+      created: 1744063624304
+      modified: 1745396329078
+      isPrivate: false
+      sortKey: -1744063624304
+    method: POST
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+    authentication:
+      type: bearer
+      token: "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMSIsImlhdCI6MTc0NTM5MzU4OCwiZXhwIj\
+        oxNzQ1NDc5OTg4fQ.wI5yvFWGE_TyENuy9hgrZnzTR3YLvUZN2qAmQHqo_EM "
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8172/offer/reject/3
+    name: отклонение оффера юзером
+    meta:
+      id: req_008e11fcabcb406bbb25de1e170fa020
+      created: 1744063650688
+      modified: 1745394865173
+      isPrivate: false
+      sortKey: -1744063650688
+    method: POST
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+    authentication:
+      type: bearer
+      token: "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMSIsImlhdCI6MTc0NTM5MzU4OCwiZXhwIj\
+        oxNzQ1NDc5OTg4fQ.wI5yvFWGE_TyENuy9hgrZnzTR3YLvUZN2qAmQHqo_EM "
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8172/paying/2/pay
+    name: оплата жилья
+    meta:
+      id: req_8870cf6605404b27be8ea0ae24483547
+      created: 1744063678728
+      modified: 1745396348845
+      isPrivate: false
+      sortKey: -1744063678728
+    method: POST
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+    authentication:
+      type: bearer
+      token: "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMSIsImlhdCI6MTc0NTM5MzU4OCwiZXhwIj\
+        oxNzQ1NDc5OTg4fQ.wI5yvFWGE_TyENuy9hgrZnzTR3YLvUZN2qAmQHqo_EM "
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8172/v1/ad/all
+    name: все объявления
+    meta:
+      id: req_93e74bb7da204923a6208a5aa2cc5063
+      created: 1744067051583
+      modified: 1745394854207
+      isPrivate: false
+      sortKey: -1744067051583
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+    authentication:
+      type: bearer
+      token: "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMSIsImlhdCI6MTc0NTM5MzU4OCwiZXhwIj\
+        oxNzQ1NDc5OTg4fQ.wI5yvFWGE_TyENuy9hgrZnzTR3YLvUZN2qAmQHqo_EM "
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8172/v1/ad/ads
+    name: создать объявление
+    meta:
+      id: req_283ea195900c4ac69599aa9cae0da634
+      created: 1745345205632
+      modified: 1745394830557
+      isPrivate: false
+      sortKey: -1745345205632
+    method: POST
+    body:
+      mimeType: multipart/form-data
+    parameters:
+      - id: pair_0a586aec00654c759105ca75b60055b8
+        name: title
+        value: таунхаус
+        disabled: false
+      - id: pair_704ae71e62364decad754684aacedab5
+        name: description
+        value: на озере
+        disabled: false
+      - id: pair_de2271853c0d48ab99474f23b345db2a
+        name: pricePerNight
+        value: "13000"
+        disabled: false
+    headers:
+      - name: Content-Type
+        value: multipart/form-data
+      - name: User-Agent
+        value: insomnia/11.0.2
+        id: pair_56d36b1bacf14cb888a586b09a2b9cd4
+      - id: pair_4a725e6c64a644eeba43f4b28d95f062
+        disabled: false
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJob3N0MSIsImlhdCI6MTc0NTM5MzU0MSwiZXhwIjoxNzQ1NDc5OTQxfQ.4zXs7OKFjA0oNP2xOp63ydubw5TC4dLlwRe6M-Kfg9A
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8172/login
+    name: login
+    meta:
+      id: req_3fc883e1511f416a8f3167d881a1af4c
+      created: 1745354827220
+      modified: 1745393587746
+      isPrivate: false
+      sortKey: -1745354827220
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "username": "user1",
+          "password": "password123"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_6f1046b7ac821d0e48222b4eefea37f1a9c0644c
+    created: 1744062757364
+    modified: 1745349396553
+  cookies:
+    - key: JSESSIONID
+      value: 50F746E9CB57E1C3882932519B4EFEBF
+      domain: localhost
+      path: /
+      httpOnly: true
+      hostOnly: true
+      creation: 2025-04-07T22:17:26.912Z
+      lastAccessed: 2025-04-22T19:16:36.552Z
+      id: a7a38c26-50ed-4f13-abf3-bc006a4ea597
+environments:
+  name: Base Environment
+  meta:
+    id: env_6f1046b7ac821d0e48222b4eefea37f1a9c0644c
+    created: 1744062757363
+    modified: 1744062757363
+    isPrivate: false
