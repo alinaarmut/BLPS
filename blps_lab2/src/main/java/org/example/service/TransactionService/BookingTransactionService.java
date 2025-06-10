@@ -185,8 +185,6 @@ public Long createOffer(Offer offer) {
         newBooking.setTimestamp(LocalDateTime.now());
 
 
-        BlockingQueue<Long> idQueue = new ArrayBlockingQueue<>(1);
-
 
         createBooking(newBooking);
         return newBooking;
