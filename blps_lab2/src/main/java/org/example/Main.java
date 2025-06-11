@@ -12,25 +12,14 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
-//
+
 @EnableScheduling
 @SpringBootApplication
-//@SpringBootApplication(exclude = {
-//        DataSourceAutoConfiguration.class,
-//        HibernateJpaAutoConfiguration.class,
-//        JtaAutoConfiguration.class
-//})
-//@EnableTransactionManagement
-//@EnableJpaRepositories(basePackages = "org.example.repository")
-//@EntityScan(basePackages = "org.example.entity")
+
 
 public class Main extends SpringBootServletInitializer   {
     public static void main(String[] args) {
         SpringApplication.run(Main.class, args);
     }
 
-//    @Override
-//    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-//        return application.sources(Main.class);
-//    }
 }
